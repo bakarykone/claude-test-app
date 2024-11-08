@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.ts"],"sourcesContent":["import { server } from './server';\n\nserver();"],"names":["server"],"mappings":"AAAA,SAASA,MAAM,QAAQ,cAAW;AAElCA"}
