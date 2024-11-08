@@ -5,17 +5,31 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "build": "swc src --out-dir dist",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon --watch src --ext ts --exec 'npm run build && npm start'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",
+    "@swc/cli": "^0.5.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.9.1",
+    "@swc/helpers": "^0.5.13",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "regenerator-runtime": "^0.14.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }

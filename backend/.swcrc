@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "dynamicImport": true,
+      "decorators": false
+    },
+    "transform": null,
+    "target": "es2020", // Optionnel : mettez à jour pour correspondre à ES Modules modernes
+    "loose": false,
+    "externalHelpers": false,
+    "keepClassNames": false
+  },
+  "module": {
+    "type": "es6", // Changez de 'commonjs' à 'es6' pour la compatibilité avec les modules ES
+    "strict": true,
+    "strictMode": true,
+    "noInterop": false,
+    "lazy": false
+  },
+  "minify": true
+}

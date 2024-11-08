@@ -9,7 +9,7 @@ const client = new Anthropic({
 });
 
 const app = express();
-const port = 5000;
+const port = 4200;
 
 const corsOptions = {
   origin: "*",
