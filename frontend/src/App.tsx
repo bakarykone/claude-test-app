@@ -63,7 +63,7 @@ export default function ChatInterface() {
   }
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100 w-screen">
       {/* Sidebar */}
       <div 
         className={`
@@ -89,7 +89,7 @@ export default function ChatInterface() {
 
       {/* Main content */}
       <div className={`flex-1 flex flex-col overflow-hidden transition-all duration-200 ${sidebarOpen ? 'md:ml-64' : ''}`}>
-        <ScrollArea className="flex-1 p-4 space-y-4 w-max">
+        <ScrollArea className="flex-1 p-4 space-y-4 w-full">
           {chatHistory.map((message, index) => (
             <div key={index} className={`flex items-start ${message.type === 'response' ? '' : 'justify-end'} space-x-4`}>
               <Avatar className={message.type === 'response' ? 'order-first' : 'order-last'}>
@@ -107,7 +107,7 @@ export default function ChatInterface() {
           <div className="flex items-center space-x-2">
             <Input
               type="text"
-              placeholder="Type your message here..."
+              placeholder="Taper votre demande."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-1"
